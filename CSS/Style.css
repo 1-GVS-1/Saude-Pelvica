@@ -106,14 +106,19 @@ div {
     background: transparent;
   }
 /***Conteudo***/
-.mySlides{
-  border: 4px solid var(--Bordas);
-  padding: 3px;
-  background-color: var(--Bordas_s);
+.mySlides {
   margin: auto;
-  width: auto;
+  height: 45vh;
+  width: 1px;
   display: none;
   margin-bottom: 10px;
+}
+.demo {
+  display: block;
+  margin-top: -50px;
+  border: 4px solid var(--Bordas);
+  padding: 2px;
+  background-color: var(--Bordas_s);
 }
 }
 /***Conteudo***/
@@ -129,25 +134,23 @@ footer{
   
 }
 .w3-col{
-  border: 1px solid var(--Bordas);
-  background-color: var(--Bordas_s);
-  padding: 2px;
   margin: auto;
 }
 
 
 .demo {
   display: block;
-  width: 12vw;
+  width:12vw;
+  margin-top: -50px;
+  border: 4px solid var(--Bordas);
+  padding: 2px;
+  background-color: var(--Bordas_s);
 }
 
-.mySlides{
-  border: 4px solid var(--Bordas);
-  padding: 3px;
-  background-color: var(--Bordas_s);
+.mySlides {
   margin: auto;
-  width: 45vw;
-  height: 75vh;
+  height: 45vh;
+  width: auto;
   display: none;
   margin-bottom: 10px;
 }
