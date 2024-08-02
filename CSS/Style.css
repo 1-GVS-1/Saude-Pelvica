@@ -1,0 +1,123 @@
+:root {
+  --Fundo_m_s: #f2f2f2;
+  --Fundo_m_n: #d3d3d3;
+  --Menu: #c28d95;
+  --Bordas: #ffc940;
+  --Links_m_n: #2c2c2c;
+  --Links_m_s: #000000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(/imagens/Fundo.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+/***Header***/
+header {
+  background-color: var(--Menu);
+  margin-bottom: 40px;
+}
+div {
+  text-align: center;
+  text-align: left;
+}
+.logo {
+  justify-content: center;
+  width: 13vw;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: 1s;
+}
+.logo:hover{
+    cursor: pointer;
+    transition: 1s;
+    transform: scale(1.1);
+}
+.links{
+    justify-content: right;
+    margin-right: 10px;
+    display: flex;
+}
+.links a{
+  position: a;
+  border: 1px solid var(--Bordas);
+  border-radius: 15px;
+}
+.links li {
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.links a{
+  background-color: var(--Fundo_m_n);
+  color: var(--Links_m_n);
+    text-decoration: none;
+    padding: 3px;
+}
+.links a:hover{
+  text-decoration: underline;
+  color: var(--Links_m_s);
+  background-color: var(--Fundo_m_s);
+}
+.menu-mobile{
+    display: none;
+  }
+@media (max-width: 600px) {
+  .logo {
+    width: 35vw;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: 1s;
+  }
+  .links{
+    display: none;
+    flex:content;
+    flex-direction: column;
+  }
+  .links li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.links a{
+    margin: auto;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 30px;
+    border-radius: 0;
+    border: 1px solid var(--Bordas);
+    width: 50%;
+    margin-bottom: 10px;
+}
+.links a:hover{
+  text-decoration: none;
+}
+.menu-mobile{
+    display: block;
+    float: right;
+    border: none;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+  }
+
+}
+/***Conteudo***/
+footer{
+  background-color: var(--Fundo_m_n);
+  width: 80vw;
+  margin: auto;
+}
+.fotos{
+  padding: 50px;
+  text-align: center;
+}
+.fotos img{
+  width: 30vw;
+}
+/******/
+/******/
