@@ -132,7 +132,7 @@ footer {
 
 .demo {
   display: block;
-  width: 5vw;
+  width: 10vw;
   margin-top: -50px;
   border: 4px solid var(--Bordas);
   padding: 2px;
@@ -141,7 +141,7 @@ footer {
 
 .mySlides {
   margin: auto;
-  width: 55vw;
+  width: 50%;
   display: none;
   margin-bottom: 10px;
 }
