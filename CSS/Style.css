@@ -17,7 +17,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
-/***Header***/
 header {
   background-color: var(--Menu);
   margin-bottom: 40px;
@@ -106,27 +105,70 @@ div {
     background: transparent;
   }
 }
-/***Conteudo***/
 footer {
   background-color: var(--Fundo_m_n);
   padding: 20px;
   margin: auto;
   width: 90vw;
 }
+.container {
+  position: relative;
+}
+
 .mySlides{
-  margin: auto;
-  width: 60%;
-  height: auto;
   display: none;
+}
+.mySlides img{
+  margin: auto;
+  display: block;
+  width: 55vw;
 }
 .primeiro{
   display: block;
 }
-.w3-col{
+
+.cursor {
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  user-select: none;
+  background-color: #00000041;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+}
+
+
+
+.row{ 
+  width: 74vw;
+  margin: auto;
+}
+
+.column{
+  display: block;
   text-align: center;
 }
+
+
 .demo{
-  top: -10%;
-  border: 1px solid var(--Bordas);
-  width: 12vw;
+  opacity: 0.6;
+  width: 12%;
+}
+.active,
+.demo:hover {
+  opacity: 1;
 }
