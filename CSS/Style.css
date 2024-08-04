@@ -67,24 +67,24 @@ div {
 .menu-mobile {
   display: none;
 }
-@media (max-width: 600px) {
-  .logo {
-    width: 35vw;
+@media  screen and (max-width: 600px){
+  .logo{
+    width: 150px;
     padding: 10px;
     margin-bottom: 10px;
     transition: 1s;
   }
-  .links {
+  .links{
     display: none;
     flex: content;
     flex-direction: column;
   }
-  .links li {
+  .links li{
     list-style: none;
     display: flex;
     justify-content: center;
   }
-  .links a {
+  .links a{
     margin: auto;
     text-align: center;
     font-size: 1.5em;
@@ -94,25 +94,16 @@ div {
     width: 50%;
     margin-bottom: 10px;
   }
-  .links a:hover {
+  .links a:hover{
     text-decoration: none;
   }
-  .menu-mobile {
+  .menu-mobile{
     display: block;
     float: right;
     border: none;
     width: 32px;
     height: 32px;
     background: transparent;
-  }
-  /***Conteudo***/
-
-  .demo {
-    display: block;
-    margin-top: -50px;
-    border: 4px solid var(--Bordas);
-    padding: 2px;
-    background-color: var(--Bordas_s);
   }
 }
 /***Conteudo***/
@@ -122,30 +113,20 @@ footer {
   margin: auto;
   width: 90vw;
 }
-
-.w3-row-padding {
-  display: flex;
-}
-.w3-col {
+.mySlides{
   margin: auto;
-}
-
-.demo {
-  display: block;
-  width: 10vw;
-  margin-top: -50px;
-  border: 4px solid var(--Bordas);
-  padding: 2px;
-  background-color: var(--Bordas_s);
-}
-
-.mySlides {
-  margin: auto;
-  width: 50%;
+  width: 60%;
+  height: auto;
   display: none;
-  margin-bottom: 10px;
 }
-.primeiro {
-  justify-content: center;
+.primeiro{
   display: block;
+}
+.w3-col{
+  text-align: center;
+}
+.demo{
+  top: -10%;
+  border: 1px solid var(--Bordas);
+  width: 12vw;
 }
