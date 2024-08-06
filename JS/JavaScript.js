@@ -10,19 +10,19 @@ function openMenu() {
   } else {
       linksElement.style.display = 'flex';
   }
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 600) {
-        linksElement.style.display = 'flex';
-    }
-  });
-  window.addEventListener('resize', function() {
-    if (window.innerWidth < 600) {
-        linksElement.style.display = 'none';
-        menuBtn.setAttribute('src', 'imagens/Menu_off.png');
-    }
-  });
-}
 
+}
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 600) {
+      linksElement.style.display = 'flex';
+  }
+});
+window.addEventListener('resize', function() {
+  if (window.innerWidth < 600) {
+      linksElement.style.display = 'none';
+      menuBtn.setAttribute('src', 'imagens/Menu_off.png');
+  }
+});
 
 
 let slideIndex = 1;
