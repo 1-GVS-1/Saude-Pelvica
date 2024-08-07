@@ -10,13 +10,14 @@ function openMenu() {
   } else {
       linksElement.style.display = 'flex';
   }
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 600) {
+        linksElement.style.display = 'flex';
+    }
+  });
 
 }
-window.addEventListener('resize', function() {
-  if (window.innerWidth > 600) {
-      linksElement.style.display = 'flex';
-  }
-});
+
 window.addEventListener('resize', function() {
   if (window.innerWidth < 600) {
       linksElement.style.display = 'none';
