@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="imagens/logo.png">
     <title>Saúde Pélvica</title>
     <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="CSS/Agendar-se.css">
     <script src="JS/JavaScript.js"></script>
 </head>
 <body>
@@ -31,52 +32,44 @@
                 </nav>
            
               </header>
-              <footer>
-
-   <table class="imagens">
-    <tr>
-      <tr>
-        <th>
-
-          <div class="container">
-            <div class="mySlides primeiro">
-              <img src="imagens/HOME/Fotos/foto1.png">
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-          
-            <div class="mySlides">
-              <img src="imagens/HOME/Fotos/foto2.png">
-            </div>
-          
-            <div class="mySlides">
-              <img src="imagens/HOME/Fotos/foto3.png">
-            </div>
-              
-            <div class="mySlides">
-              <img src="imagens/HOME/Fotos/foto4.png">
-            </div>
-          
-            <div class="mySlides">
-              <img src="imagens/HOME/Fotos/foto5.png">
-            </div>
-              
-            <div class="mySlides">
-              <img src="imagens/HOME/Fotos/foto6.png">
-            </div>
-          </div>
-        </th>
-      </tr>
-      <th>
-          <img class="demo cursor" src="imagens/HOME/Fotos/foto1.png" onclick="currentSlide(1)">
-          <img class="demo cursor" src="imagens/HOME/Fotos/foto2.png" onclick="currentSlide(2)">
-          <img class="demo cursor" src="imagens/HOME/Fotos/foto3.png" onclick="currentSlide(3)">
-          <img class="demo cursor" src="imagens/HOME/Fotos/foto4.png" onclick="currentSlide(4)">
-          <img class="demo cursor" src="imagens/HOME/Fotos/foto5.png" onclick="currentSlide(5)">
-          <img class="demo cursor" src="imagens/HOME/Fotos/foto6.png" onclick="currentSlide(6)">
-      </th>
-    </tr>
-   </table>
+     <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar-se</title>
+</head>
+<body>
+    <footer>
+        <h1>Agendar-se</h1>
+        <form action="index.html" method="post">
+            <table class="responsive-table">
+                <tr>
+                    <td><label for="nome">Nome:</label></td>
+                    <th><input type="text" id="nome" name="nome" pattern="[a-zA-ZáéíóúâêîôûàèìòùãõäëïöüçÁÉÍÓÚÂÊÎÔÛÀÈÌÒÙÃÕÄËÏÖÜÇ]+" title="Digite apenas letras" minlength="3" required></th>
+                </tr>
+                <tr>
+                    <td><label for="senha">Senha:</label></td>
+                    <th><input type="password" name="senha" id="senha" minlength="6" required></th>
+                </tr>
+                <tr>
+                    <td><label for="email">E-mail:</label></td>
+                    <th><input type="email" id="email" name="email" required></th>
+                </tr>
+                <tr>
+                    <td><label for="mensagem">Mensagem:</label></td>
+                    <th><textarea id="mensagem" name="mensagem" rows="4" required></textarea></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <th><input id="enviar" type="submit" value="Enviar"></th>
+                </tr>
+            </table>
+        </form>
     </footer>
+</body>
+</html>
+
+    
 </body>
 </html>

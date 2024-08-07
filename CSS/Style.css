@@ -58,7 +58,6 @@ div {
 }
 .links .esp_sub {
   display: none;
-
 }
 .links a:hover {
   text-decoration: underline;
@@ -68,7 +67,7 @@ div {
 .menu-mobile {
   display: none;
 }
-.esp_sub a{
+.esp_sub a {
   text-align: center;
   background-color: var(--Fundo_m_n);
   display: none;
@@ -109,17 +108,17 @@ div {
   .links a:hover {
     text-decoration: none;
   }
-  .esp_sub a{
+  .esp_sub a {
     margin: auto;
     text-align: center;
-    font-size: 1.0em;
+    font-size: 1em;
     display: none;
     width: 50%;
     line-height: 30px;
     border: 1px solid var(--Bordas);
     background-color: var(--Fundo_m_n);
   }
-  .esp_sub a:hover{
+  .esp_sub a:hover {
     background-color: var(--Fundo_m_s);
   }
   .menu-mobile {
@@ -130,20 +129,8 @@ div {
     height: 32px;
     background: transparent;
   }
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    padding: 10px;
-    margin-top: -50px;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 10px;
-    user-select: none;
-    -webkit-user-select: none;
-  }
 }
+/* Conteudo */
 footer {
   background-color: var(--Fundo_m_n);
   padding: 20px;
@@ -168,6 +155,10 @@ footer {
 
 .cursor {
   cursor: pointer;
+}
+.cursor:hover {
+  transform: scale(1.1);
+  border: 1px solid var(--Bordas);
 }
 
 .prev,
