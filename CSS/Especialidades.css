@@ -27,10 +27,27 @@ footer p {
   font-size: 1.2em;
   line-height: 30px;
 }
+#sobremim{
+  display: block;
+  margin: auto;
+  border: 3px solid var(--Bordas);
+  width: 50%;
+  height: 60%;
+}
 @media screen and (max-width: 600px) {
   footer #img img{
-
     width: 90%;
     height: 200px;
+  }
+  #sobremim{
+    display: block;
+    margin: auto;
+    border: 3px solid var(--Bordas);
+    width: 90%;
+    height: 60%;
+  }
+  footer p {
+    text-align: left;
+    font-size: 1.0em;
   }
 }
