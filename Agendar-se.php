@@ -1,3 +1,35 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "agendamentos";
+
+// Cria a conexão
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verifica a conexão
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $mensagem = $_POST['mensagem'];
+
+    $sql = "INSERT INTO usuarios (nome, email, telefone, mensagem) VALUES ('$nome', '$email', '$telefone', '$mensagem')";
+
+    if ($conn->query($sql) === TRUE) {
+    } else {
+        echo "Erro: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+$conn->close();
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -42,34 +74,26 @@
 <body>
     <footer>
         <h1>Agendar-se</h1>
-        <form action="index.html" method="post">
-            <table class="responsive-table">
-                <tr>
-                    <td><label for="nome">Nome:</label></td>
-                    <th><input type="text" id="nome" name="nome" pattern="[a-zA-ZáéíóúâêîôûàèìòùãõäëïöüçÁÉÍÓÚÂÊÎÔÛÀÈÌÒÙÃÕÄËÏÖÜÇ]+" title="Digite apenas letras" minlength="3" required></th>
-                </tr>
-                <tr>
-                    <td><label for="senha">Senha:</label></td>
-                    <th><input type="password" name="senha" id="senha" minlength="6" required></th>
-                </tr>
-                <tr>
-                    <td><label for="email">E-mail:</label></td>
-                    <th><input type="email" id="email" name="email" required></th>
-                </tr>
-                <tr>
-                    <td><label for="mensagem">Mensagem:</label></td>
-                    <th><textarea id="mensagem" name="mensagem" rows="4" required></textarea></th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <th><input id="enviar" type="submit" value="Enviar"></th>
-                </tr>
-            </table>
-        </form>
+        <div class="agendar">
+            <form action="Agendar-se.php" method="post">
+                <label for="nome">Nome:</label>
+                <th><input type="text" id="nome" name="nome" pattern="[a-zA-ZáéíóúâêîôûàèìòùãõäëïöüçÁÉÍÓÚÂÊÎÔÛÀÈÌÒÙÃÕÄËÏÖÜÇ]+" title="Digite seu nome" minlength="4" maxlength="100" placeholder="Digite seu nome" required></th>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required><br><br>
+        
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu número" required><br><br>
+        
+          
+        
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite aqui..."  maxlength="412"></textarea><br><br>
+        
+                <input type="submit" value="Enviar" name="submit" id="submit">
+            </form>
+        </div>
+        
     </footer>
-</body>
-</html>
-
-    
 </body>
 </html>
