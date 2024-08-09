@@ -248,7 +248,7 @@ footer {
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="Sobre.html">Sobre</a></li>
-                    <li><a href="Agendar-se.html">Agendar-se</a></li>
+                    <li><a href="Agendar-se.php">Agendar-se</a></li>
                     <li><a  onclick="showEsp()" >Especialidades</a></li>
 
 
