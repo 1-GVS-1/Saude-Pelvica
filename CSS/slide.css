@@ -1,0 +1,70 @@
+:root {
+    --Fundo_m_s: #b3b3b3;
+    --Fundo_m_n: #ffffff;
+    --Menu: #c28d95;
+    --Bordas: #ffc940;
+    --Bordas_s: #e0bc61;
+    --Links_m_n: #2c2c2c;
+  }
+footer{
+    display: block;
+    margin: auto;
+    width: 40%;
+    border: 3px solid var(--Bordas);
+}
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.carousel img {
+    width: 100%;
+    display: none;
+    transition: 3s;
+}
+.carousel img:hover {
+transition: 3s;
+transform: scale(1.3);
+}
+.carousel img.active {
+    display: block;
+}
+.carousel .nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel .nav p {
+    padding: 630px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.carousel .labels {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 10px;
+}
+.carousel .labels label {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 5px;
+}
+@media (max-width: 768px) {
+    footer{
+        width: 80%;
+    }
+  
+}

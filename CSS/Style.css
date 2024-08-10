@@ -1,0 +1,196 @@
+:root {
+  --Fundo_m_s: #b3b3b3;
+  --Fundo_m_n: #ffffff;
+  --Menu: #c28d95;
+  --Bordas: #ffc940;
+  --Bordas_s: #e0bc61;
+  --Links_m_n: #2c2c2c;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(/imagens/Fundo.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+header {
+  background-color: var(--Menu);
+  margin-bottom: 40px;
+}
+div {
+  text-align: center;
+  text-align: left;
+}
+.logo {
+  justify-content: center;
+  width: 150px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: 1s;
+}
+.logo:hover {
+  cursor: pointer;
+  transition: 1s;
+  transform: scale(1.1);
+}
+.links {
+  justify-content: right;
+  margin-right: 10px;
+  display: flex;
+}
+.links a {
+  border: 1px solid var(--Bordas);
+  border-radius: 15px;
+}
+.links li {
+  list-style: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.links a {
+  background-color: var(--Fundo_m_n);
+  color: var(--Links_m_n);
+  text-decoration: none;
+  padding: 3px;
+}
+.links .esp_sub {
+  display: none;
+}
+.links a:hover {
+  text-decoration: underline;
+  color: var(--Links_m_s);
+  background-color: var(--Fundo_m_s);
+}
+.menu-mobile {
+  display: none;
+}
+.esp_sub a {
+  text-align: center;
+  background-color: var(--Fundo_m_n);
+  display: none;
+  border-radius: 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    width: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: 1s;
+  }
+
+  .links {
+    display: none;
+    flex: content;
+    flex-direction: column;
+  }
+  .links li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .links .esp_sub {
+    display: none;
+  }
+  .links a {
+    margin: auto;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 30px;
+    border-radius: 0;
+    border: 1px solid var(--Bordas);
+    width: 50%;
+  }
+  .links a:hover {
+    text-decoration: none;
+  }
+  .esp_sub a {
+    margin: auto;
+    text-align: center;
+    font-size: 1em;
+    display: none;
+    width: 50%;
+    line-height: 30px;
+    border: 1px solid var(--Bordas);
+    background-color: var(--Fundo_m_n);
+  }
+  .esp_sub a:hover {
+    background-color: var(--Fundo_m_s);
+  }
+  .menu-mobile {
+    display: block;
+    float: right;
+    border: none;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+  }
+}
+/* Conteudo */
+footer {
+  background-color: var(--Fundo_m_n);
+  padding: 20px;
+  margin: auto;
+  width: 90vw;
+}
+.container {
+  position: relative;
+}
+
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  margin: auto;
+  display: block;
+  width: 55vw;
+}
+.primeiro {
+  display: block;
+}
+
+.cursor {
+  cursor: pointer;
+}
+.cursor:hover {
+  transform: scale(1.1);
+  border: 1px solid var(--Bordas);
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 15px;
+  margin-top: -50px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+}
+
+.imagens {
+  background-color: var(--Fundo_m_s);
+  margin: auto;
+  width: 55vw;
+  border: 2px solid var(--Bordas);
+}
+
+.demo {
+  opacity: 0.4;
+  width: 8vw;
+}
+.active,
+.demo:hover {
+  opacity: 1;
+}

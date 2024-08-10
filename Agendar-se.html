@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imagens/logo.png">
+    <title>Saúde Pélvica</title>
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="CSS/Agendar-se.css">
+    <script src="JS/JavaScript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #resultado {
+            text-align: center;
+            margin: auto;
+            display: block;
+            color: green;
+        }
+        .error {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="menu-mobile" onclick="openMenu()"><img id="menu-btn" src="imagens/Menu_off.png" alt=""></button>
+        <a href="index.html"><img class="logo" src="imagens/logo.png" alt="logo"></a>
+        <nav class="links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Sobre.html">Sobre</a></li>
+                <li><a href="Agendar-se.html">Agendar-se</a></li>
+                <li><a onclick="showEsp()">Especialidades</a></li>
+                <li class="esp_sub"><a class="esp_sub" href="Uroginecologica.html">Uroginecologica</a></li>
+                <li class="esp_sub"><a class="esp_sub" href="Obstétrica.html">Obstétrica</a></li>
+                <li class="esp_sub"><a class="esp_sub" href="Disfunção sexual Feminina.html">Disfunção sexual Feminina</a></li>
+                <li class="esp_sub"><a class="esp_sub" href="Uropediatria.html">Uropediatria</a></li>
+                <li class="esp_sub"><a class="esp_sub" href="Coloproctologica.html">Coloproctologica</a></li>
+                <li class="esp_sub"><a class="esp_sub" href="Terapias Manuais.html">Terapias Manuais</a></li>
+            </ul>
+        </nav>
+    </header>
+    <footer>
+        <form id="meuFormulario">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" oninput="validateInput(this)" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" oninput="validateEmail(this)" required>
+            <span id="error"></span>
+            <label for="mensagem">Mensagem:</label>
+            <input type="text" id="mensagem" name="mensagem" oninput="validateInput(this)" required>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="resultado"></div>
+        <script>
+            $(document).ready(function() {
+                $('#meuFormulario').on('submit', function(event) {
+                    event.preventDefault(); // Impede o envio padrão do formulário
+                    $.ajax({
+                        url: 'processa.php',
+                        type: 'POST',
+                        data: $(this).serialize(),
+                        success: function(data) {
+                            $('#resultado').html(data); // Exibe o resultado no div
+                        }
+                    });
+                });
+            });
+        </script>
+    </footer>
+</body>
+</html>
