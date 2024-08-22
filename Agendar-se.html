@@ -58,7 +58,7 @@
                 $('#meuFormulario').on('submit', function(event) {
                     event.preventDefault(); // Impede o envio padrão do formulário
                     $.ajax({
-                        url: 'processa.php',
+                        url: 'Agendar-se.php',
                         type: 'POST',
                         data: $(this).serialize(),
                         success: function(data) {
